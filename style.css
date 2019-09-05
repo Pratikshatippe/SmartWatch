@@ -1,6 +1,12 @@
 :root{
   --color-1:white;
   --color-2:blue;
+  --color-3:black;
+  --color-4:rgb(88, 85, 85);
+}
+*{
+  margin:0;
+  padding:0;
 }
 .container-fluid{
   height: 100vh;
@@ -8,33 +14,99 @@
 .row{
   height: 100vh;
 }
-.col.outer{
+.outer{
+  align-items: center;
   background-color:var(--color-2);
+  font-size: 4em;
   justify-content: center;
-  text-align: center;
   display: flex;
 }
 span{
     color:var(--color-1);
 }
 .middle{
-  height:160px;
+  height:33%;
 }
 .strap{
-  height:100px;
+  height:33%;
+}
+.tmid{
+  background-color: var(--color-4);
+  justify-content: center;
+  align-items: flex-end;
+  display: flex;
+  margin-top: 26vh;
+  height: 22%;
+  width: 100%;
+  padding: 0;
 }
 .mid{
-  background-color: rgb(88, 85, 85);
-}
-.mid{
-  background-color: black;
-  width:50%;
-  height: 75%;
+  background-color: var(--color-4);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  width: 120%;
   border-radius: 10px;
 }
-.timer{
-  color:var(--color-1);
+.rect{
+  padding: 5;
+  margin: 2;
+  height: 95%;
+  width: 95%;
+  border-radius: 10px;
+  background-color: black;
 }
+.home{
+  color:var(--color-1);
+  text-align: center;
+  justify-content: center;
+  font-size: 2em;
+  margin-top: 20%;
+}
+.bmid{
+  background-color: var(--color-4);
+  margin: 0;
+  padding: 0;
+  height:20%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-block-start: 1em;
+}
+.fas{
+  text-align: center;
+  /* color:pink; */
+  font-size:45px;
+  
+  background-color: var(--color-4);
+  margin: 0;
+  padding: 0;
+  height:22%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.music {
+  border-radius: 90px;
+  cursor: pointer;
+  color: pink;
+  display: inline;
+
+}
+.far {
+  border-radius: 80px;
+  cursor: pointer;
+  display: inline;
+  color:white;
+}
+.msg {
+  border-radius: 80px;
+  cursor: pointer;
+  color: yellowgreen;
+  display: inline;
+}
+
 
   
   
