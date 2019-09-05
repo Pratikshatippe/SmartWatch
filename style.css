@@ -28,26 +28,38 @@ span{
   }
   .outerrect{
     align-content: center;
-    width: 270px;
-    height: 270px;
-    background-color: black;
+    width: 170px;
+    height: 180px;
+    background-color:rgba(78, 72, 72, 0.877);
     border-radius: 10%;
     margin-left: 70%;
 }
   .rect{
-      /* align-content: center; */
-      width: 250px;
-      height: 250px;
-      background-color: gray;
-      border-radius: 10%;
-      padding: 20px;
-      /* margin-top: 20px;
-      margin-left:20px;
-      margin-right: 20px; */
-
+    width: 150px;
+    height: 160px;
+    background-color:black;
+    border-radius: 10%;
+    padding: 20px;
+    margin-left:10px;
+}
+.up{
+    width: 140px;
+    height: 40px;
+    background-color: rgba(78, 72, 72, 0.877);
+    margin-left: 78%;
+  }
+  .menu{
+    width: 140px;
+    height: 40px;
+    background-color:rgba(78, 72, 72, 0.877);
+    margin-left: 78%;
+  }
+  .btn-group{
+    margin-top: 20px;
   }
   h4{
       color:blue;
       padding: 15px;
   }
+ 
   
