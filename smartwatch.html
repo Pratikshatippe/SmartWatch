@@ -12,33 +12,32 @@
         <meta charset="UTF-8">
     </head>
     <body>
-        <div class="main">
+        <div class="container-fluid">
             <!-- It contains Left part of the web page is smart watch -->
-            <div class="left">
+            <div class="row">
+            <div class="col outer">
                 <h1><span>Smart</span> Watch</h1>
             </div>
             <!-- It contains right part of the web page is smart watch -->
-            <div class="content">
-                <div class="row">
-                <div class="col-sm-12 top"></div>
+            <div class="col inner">
+                <!-- <div class="row main"> -->
+                <div class="row strap"></div>
                 <!-- Display design part of smart watch -->
-                <div class="col-sm-12 middle">
-                <div class="up"></div>
-                <div class="outerrect">
-                    
-                  <div class="rect">
-                      <div class="timer">
-                          <h4>Timer</h4>
-                      </div>
-                      <div class="btn-group">
-                      <input type="button" class="btn btn-info" value="Start">
-                      <input type="button" class="btn btn-info" value="Lap"></div>
-                    </div>
-                    </div>
-                    <div class="menu">
-                </div>
-                <div class="col-sm-12 bottom"></div></div>
-            </div>
+                <div class="row middle">
+                    <div class="col-sm left"></div>
+                    <div class="col-sm mid">
+                        <div class="timer">
+                            <h5>Timer</h5>
+                            <h6>00:00:00</h6>
+                        </div>
+                        <div class="btn-group">
+                                <input type="button" class="btn btn-info" value="Start">
+                                <input type="button" class="btn btn-info" value="Lap"></div></div>
+                    <div class="col-sm right"></div>    
+        </div>
+        <div class="row strap"></div>
+        </div>
+        </div>
         </div>
      </body>
 </html>
