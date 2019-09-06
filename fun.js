@@ -13,12 +13,12 @@ document.getElementById("time").innerHTML = time1;
 
 // Message
 
-const messagelist = ["VZ-VFCARE","VM-Career","VM-SWIGGY","VK-SBIUPI"];
+const messagelist = ["VZ-VFCARE","VM-Career","VM-SWIGGY"];
 
 document.getElementById("msg-1").innerHTML=messagelist[0];
 document.getElementById("msg-2").innerHTML=messagelist[1];
 document.getElementById("msg-3").innerHTML=messagelist[2];
-document.getElementById("msg-4").innerHTML=messagelist[3];
+// document.getElementById("msg-4").innerHTML=messagelist[3];
 // show and hide
 $(document).ready(function(){
     $(".main").show();
