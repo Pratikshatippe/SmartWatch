@@ -3,6 +3,8 @@
   --color-2:blue;
   --color-3:black;
   --color-4:rgb(88, 85, 85);
+  --color-5:pink;
+  --color-6:yellowgreen;
 }
 *{
   margin:0;
@@ -89,17 +91,17 @@ span{
 }
 .music {
   cursor: pointer;
-  color: pink;
+  color:var(--color-5);
   display: inline;
 }
 .far {
   cursor: pointer;
   display: inline;
-  color:white;
+  color:var(--color-1);
 }
 .msg {
   cursor: pointer;
-  color: yellowgreen;
+  color: var(--color-6);
   display: inline;
 }
 .navbar{
@@ -115,8 +117,9 @@ h3{
   color:var(--color-2);
   text-align: left;
 }
-.lap{
-  padding:20px;
+img.resize {
+  width:10px;
+  height:20px;
 }
 
 

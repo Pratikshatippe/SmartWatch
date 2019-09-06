@@ -8,6 +8,10 @@ today.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true
 )
 document.getElementById("time").innerHTML = time1;
 
+const messagelist = ["VZ-VFCARE","VM-Career","VM-SWIGGY","VK-SBIUPI"];
+console.log(messagelist);
+document.getElementById("chat").innerHTML=messagelist;
+
 // show and hide
 $(document).ready(function(){
     $(".main").show();
@@ -36,3 +40,5 @@ $(document).ready(function(){
         $(".mainTimer").show(); 
     });
 });
+
+// Message
