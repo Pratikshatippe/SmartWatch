@@ -10,6 +10,29 @@ document.getElementById("time").innerHTML = time1;
 
 // show and hide
 $(document).ready(function(){
-    $('#message').click(function() {
-      $("Div").hide();
-    })
+    $(".main").show();
+    $(".mainMsg").hide();
+    $(".mainMusic").hide();
+    $(".mainTimer").hide();
+
+    $("#message").click(function(){
+        $(".main").hide();
+        $(".mainMsg").show();
+        $(".mainMusic").hide();
+        $(".mainTimer").hide();  
+    });
+
+    $("#music").click(function(){
+        $(".main").hide();
+        $(".mainMsg").hide();
+        $(".mainMusic").show();
+        $(".mainTimer").hide(); 
+    });
+
+    $("#stopwatch").click(function(){
+        $(".main").hide();
+        $(".mainMsg").hide();
+        $(".mainMusic").hide();
+        $(".mainTimer").show(); 
+    });
+});
