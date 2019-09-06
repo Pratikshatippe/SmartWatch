@@ -55,7 +55,7 @@ span{
   height: 95%;
   width: 95%;
   border-radius: 10px;
-  background-color: black;
+  background-color: var(--color-3);
 }
 .home{
   color:var(--color-1);
@@ -88,24 +88,37 @@ span{
   display: flex;
 }
 .music {
-  border-radius: 90px;
   cursor: pointer;
   color: pink;
   display: inline;
-
 }
 .far {
-  border-radius: 80px;
   cursor: pointer;
   display: inline;
   color:white;
 }
 .msg {
-  border-radius: 80px;
   cursor: pointer;
   color: yellowgreen;
   display: inline;
 }
+.navbar{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.home{
+  margin:0;
+  padding: 0;
+}
+h3{
+  color:var(--color-2);
+  text-align: left;
+}
+.lap{
+  padding:20px;
+}
+
 
 
   
