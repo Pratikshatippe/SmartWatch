@@ -3,11 +3,11 @@ var today = new Date();
 var day = today.getDay();
 var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
 document.getElementById("day").innerHTML = daylist[day];
-var hours = today.getHours();
+var hours = today.getHours().toString();
 if(hours>12){
     hours = hours-12;
 }
-var minute = today.getMinutes();
+var minute = today.getMinutes().toString();
 var time1 = (hours+":"+minute);
 document.getElementById("time").innerHTML = time1;
 document.getElementById("top").innerHTML = time1;
@@ -42,8 +42,12 @@ document.getElementById("con-4").innerHTML=messagelist[3].con;
 // Timer
 var timer = document.getElementById('timer');
 var toggleBtn = document.getElementById('start');
+var lap = document.getElementById('lap');
 var watch = new Stopwatch(timer);
 
+lap.addEventListener('click', function(){
+  watch.lap();
+});
 function start() {
     toggleBtn.textContent = 'Stop';
     watch.start();
@@ -55,7 +59,7 @@ function start() {
   toggleBtn.addEventListener('click', function() {
     watch.isOn ? stop() : start();
   });
-
+  
 function Stopwatch(elem) {
     var time = 0;
     var offset;
@@ -68,7 +72,7 @@ function Stopwatch(elem) {
       elem.textContent = timeFormatter(time);
     }
     function delta() {
-      var now = Date.now();
+      var now = performance.now();
       var timePassed = now - offset;
   
       offset = now;
@@ -90,11 +94,14 @@ function Stopwatch(elem) {
       while (seconds.length < 2) {
         seconds = '0' + seconds;
       }
-      return hours + ' : ' + minutes + ' . ' + seconds;
+      hours= hours-5;
+      minutes = minutes-30;
+      return hours + '0:0' + minutes + ':' + seconds;
     }
+   
     this.start = function() {
       interval = setInterval(update.bind(this), 10);
-      offset = Date.now();
+      offset = performance.now();
       this.isOn = true;
     };
     this.stop = function() {
@@ -102,8 +109,14 @@ function Stopwatch(elem) {
       interval = null;
       this.isOn = false;
     };
+    this.lap = function(){
+      var laplbltxt = document.createTextNode("LAP"+" - " + hours+":" + minutes + ":" + seconds);
+      var lp = document.createElement("display");
+      lp.appendChild(laplbltxt);
+    };
     this.isOn = false;
   }
+
 // show and hide
 $(document).ready(function(){
     $(".main").show();
