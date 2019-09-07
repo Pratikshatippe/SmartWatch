@@ -20,10 +20,9 @@
 .outer{
   align-items: center;
   background-color:var(--color-2);
-  font-size: 6em;
+  font-size: 4em;
   justify-content: center;
   display: flex;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 span{
     color:var(--color-1);
@@ -126,7 +125,7 @@ span{
   padding: 0;
 }
 h3{
-  color:var(--color-2);
+  color:var(--color-1);
   text-align: left;
   display: inline;
 }
@@ -139,6 +138,23 @@ h3{
 }
 .list-group{
   overflow: auto;
+}
+.btn-group{
+  margin-top: 20px;
+}
+.chat{
+  overflow: auto;
+}
+#msg-1,#msg-2,#msg-3,#msg-4{
+  background-color: var(--color-7);
+  color: var(--color-3);
+  cursor: pointer;
+  margin-top: 15px;
+  text-align: left;
+}
+#maincon{
+  background-color: var(--color-7);
+  color: var(--color-3);
 }
 
 
