@@ -13,14 +13,31 @@ document.getElementById("time").innerHTML = time1;
 document.getElementById("top").innerHTML = time1;
 document.getElementById("up").innerHTML = time1;
 document.getElementById("btm").innerHTML = time1;
+document.getElementById("btm-1").innerHTML = time1;
+document.getElementById("btm-2").innerHTML = time1;
+document.getElementById("btm-3").innerHTML = time1;
+document.getElementById("btm-4").innerHTML = time1;
 // Message
 
-const messagelist = ["VZ-VFCARE","VM-Career","VM-SWIGGY","VZ-SBIUPI"];
+const messagelist = [
+    {name:"VZ-VFCARE", con:"hello! Now Upgrade to a 4G SIM and get 4GB data free for 10 days."},
+    {name:"VM-Career", con:"This monday and tuesday, the answers to all your questions are here!"},
+    {name:"VM-SWIGGY", con:"keep calm and party on this friday, with up to 50% off at big Hunger Fest!"},
+    {name:"VZ-SBIUPI", con:"Dear SBI UPI User, your A/cX4890 - debited by Rs 40.0 on 05Sep10 Ref No 4256178"}
+];
 
-document.getElementById("msg-1").innerHTML=messagelist[0];
-document.getElementById("msg-2").innerHTML=messagelist[1];
-document.getElementById("msg-3").innerHTML=messagelist[2];
-document.getElementById("msg-4").innerHTML=messagelist[3];
+document.getElementById("msg-1").innerHTML=messagelist[0].name;
+document.getElementById("con-1").innerHTML=messagelist[0].con;
+
+document.getElementById("msg-2").innerHTML=messagelist[1].name;
+document.getElementById("con-2").innerHTML=messagelist[1].con;
+
+document.getElementById("msg-3").innerHTML=messagelist[2].name;
+document.getElementById("con-3").innerHTML=messagelist[2].con;
+
+document.getElementById("msg-4").innerHTML=messagelist[3].name;
+document.getElementById("con-4").innerHTML=messagelist[3].con;
+
 
 // Timer
 var timer = document.getElementById('timer');
@@ -93,19 +110,61 @@ $(document).ready(function(){
     $(".mainMsg").hide();
     $(".mainMusic").hide();
     $(".mainTimer").hide();
+    $(".maincon-1").hide();
+    $(".maincon-2").hide();
+    $(".maincon-3").hide();
+    $(".maincon-4").hide();
 
     $("#message").click(function(){
         $(".main").hide();
         $(".mainMsg").show();
         $(".mainMusic").hide();
-        $(".mainTimer").hide();  
+        $(".mainTimer").hide(); 
+        $(".maincon-1").hide(); 
+        $(".maincon-2").hide();
+        $(".maincon-3").hide();
+        $(".maincon-4").hide();
     });
     $("#msg-1").click(function(){
         $(".main").hide();
         $(".mainMsg").hide();
         $(".mainMusic").hide();
         $(".mainTimer").hide(); 
-        $ ("#msg-1").show();
+        $ (".maincon-1").show();
+        $(".maincon-2").hide();
+        $(".maincon-3").hide();
+        $(".maincon-4").hide();
+    });
+    $("#msg-2").click(function(){
+        $(".main").hide();
+        $(".mainMsg").hide();
+        $(".mainMusic").hide();
+        $(".mainTimer").hide(); 
+        $(".maincon-1").hide();
+        $ (".maincon-2").show();
+        $(".maincon-3").hide();
+        $(".maincon-4").hide();
+    });
+    $("#msg-3").click(function(){
+        $(".main").hide();
+        $(".mainMsg").hide();
+        $(".mainMusic").hide();
+        $(".mainTimer").hide(); 
+        $ (".maincon-1").hide();
+        $(".maincon-2").hide(); 
+        $(".maincon-3").show(); 
+        $(".maincon-4").hide(); 
+    });
+    $("#msg-4").click(function(){
+        $(".main").hide();
+        $(".mainMsg").hide();
+        $(".mainMusic").hide();
+        $(".mainTimer").hide(); 
+        $(".maincon-1").hide(); 
+        $(".maincon-2").hide(); 
+        $(".maincon-3").hide(); 
+        $ (".maincon-4").show();
+
     });
 
     $("#music").click(function(){
@@ -113,6 +172,7 @@ $(document).ready(function(){
         $(".mainMsg").hide();
         $(".mainMusic").show();
         $(".mainTimer").hide(); 
+        $(".maincon").hide();
     });
 
     $("#stopwatch").click(function(){
@@ -120,6 +180,7 @@ $(document).ready(function(){
         $(".mainMsg").hide();
         $(".mainMusic").hide();
         $(".mainTimer").show(); 
+        $(".maincon").hide();
     });
 });
 

@@ -81,11 +81,11 @@ span{
   border-block-start: 1em;
 }
 .fas{
+  background-color: var(--color-4);
   text-align: center;
-  /* color:pink; */
   font-size:45px;
   
-  background-color: var(--color-4);
+  
   margin-left:20px;
   margin-right: 20px;
   padding: 0;
@@ -96,29 +96,29 @@ span{
 }
 .mainTimer,.mainMusic,.mainMsg{
   color:var(--color-1);
-  text-align: center;
-  justify-content: center;
   font-size: 2em;
+  justify-content: center;
+  text-align: center;
 }
 .music {
-  cursor: pointer;
   color:var(--color-5);
+  cursor: pointer;
   display: inline;
 }
 .far {
+  color:var(--color-1);
   cursor: pointer;
   display: inline;
-  color:var(--color-1);
 }
 .msg {
-  cursor: pointer;
   color: var(--color-6);
+  cursor: pointer;
   display: inline;
 }
 .navbar{
-  justify-content: center;
   align-items: center;
   display: flex;
+  justify-content: center;
 }
 .home{
   margin:0;
@@ -126,8 +126,8 @@ span{
 }
 h3{
   color:var(--color-1);
-  text-align: left;
   display: inline;
+  text-align: left; 
 }
 .list-group{
   background-color: var(--color-7);
@@ -135,9 +135,6 @@ h3{
 }
 .list-group{
   text-align: left;
-}
-.list-group{
-  overflow: auto;
 }
 .btn-group{
   margin-top: 20px;
@@ -152,9 +149,12 @@ h3{
   margin-top: 15px;
   text-align: left;
 }
-#maincon{
+.content-1,.content-2,.content-3,.content-4{
   background-color: var(--color-7);
   color: var(--color-3);
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
 }
 
 
