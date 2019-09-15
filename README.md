@@ -3,4 +3,6 @@ It contains timer, music playlist and messages.
 ## Technology
 HTML, CSS and Javascript
 ## Design
-![screenshoot](smart watch.png)
+![screenshoot](smartwatch.png)
+### Preview
+ https://pratikshatippe.github.io/SmartWatch/
