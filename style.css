@@ -43,8 +43,8 @@ span{
   margin-right: 3vw;
   height: 8.33vh;
   width: 100%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   padding: 0;
 }
 .mid{
@@ -88,8 +88,8 @@ span{
   margin-bottom: 25vh;
   padding: 0;
   height:8.33vh;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -136,18 +136,8 @@ h3{
   display: inline;
   text-align: left; 
 }
-.list-group{
-  background-color: var(--color-7);
-  color:var(--color-3);
-}
-.list-group{
-  text-align: left;
-}
-.btn-group{
-  margin-top: 20px;
-}
 .chat{
-  overflow-y:auto;
+  overflow-y:scroll;
   font-size: 1.5vw;
 }
 #msg-1,#msg-2,#msg-3,#msg-4{
