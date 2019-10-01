@@ -2,10 +2,9 @@
   --color-1:white;
   --color-2:#03a9f4;
   --color-3:black;
-  --color-4:rgb(58, 56, 56);
-  --color-5:pink;
-  --color-6:yellowgreen;
-  --color-7:rgb(236, 229, 229);
+  --color-4:rgb(90, 84, 84);
+  --color-5:rgb(236, 229, 229);
+  --color-6:rgb(30, 30, 204);
 }
 *{
   margin:0;
@@ -82,7 +81,7 @@ span{
 .fas{
   background-color: var(--color-4);
   text-align: center;
-  font-size:3vw;
+  font-size:40px;
   margin-left:3vw;
   margin-right: 3vw;
   margin-bottom: 25vh;
@@ -109,50 +108,51 @@ span{
   text-align: center;
 }
 .music {
-  color:var(--color-5);
+  color:var(--color-3);
   cursor: pointer;
   display: inline;
 }
 .far {
-  color:var(--color-1);
+  color:var(--color-3);
   cursor: pointer;
   display: inline;
 }
 .msg {
-  color: var(--color-6);
+  color: var(--color-3);
   cursor: pointer;
   display: inline;
+}
+.back{
+  cursor: pointer;
 }
 .navbar{
   align-items: center;
   display: flex;
   justify-content: center;
 }
-h3{
+h4{
   color:var(--color-1);
+  text-align: center; 
   display: inline;
-  text-align: left; 
 }
 .chat{
   font-size: 1.5vw;
 }
 #msg-1,#msg-2,#msg-3,#msg-4{
-  background-color: var(--color-7);
+  background-color: var(--color-5);
   color: var(--color-3);
   cursor: pointer;
   margin-top: 13px;
-  text-align: left;
+  text-align: center;
   margin-left: 0.5vw;
   margin-right: 0.5vw;
+  border-radius: 5px;
 }
-.content-1,.content-2,.content-3,.content-4{
-  background-color: var(--color-7);
-  color: var(--color-3);
+.maincon-1,.maincon-2,.maincon-3,.maincon-4{
+  color: var(--color-1);
   font-size: 1.5vw;
   margin-left: 1vw;
   margin-right: 1vw;
-  margin-top: 2vh;
-  margin-bottom: 1vh;
 }
 
 
