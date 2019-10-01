@@ -26,6 +26,7 @@ const messagelist = [
     {name:"VZ-SBIUPI", con:"Dear SBI UPI User, your A/cX4890 - debited by Rs 40.0 on 05Sep10 Ref No 4256178"}
 ];
 
+// This for display message list in message 
 document.getElementById("msg-1").innerHTML=messagelist[0].name;
 document.getElementById("con-1").innerHTML=messagelist[0].con;
 
