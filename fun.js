@@ -3,20 +3,8 @@ var today = new Date();
 var day = today.getDay();
 var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
 document.getElementById("day").innerHTML = daylist[day];
-var hours = today.getHours().toString();
-if(hours>12){
-    hours = hours-12;
-}
-var minute = today.getMinutes().toString();
-var time1 = (hours+":"+minute);
+var time1 = (today.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }));
 document.getElementById("time").innerHTML = time1;
-document.getElementById("top").innerHTML = time1;
-document.getElementById("up").innerHTML = time1;
-document.getElementById("btm").innerHTML = time1;
-document.getElementById("btm-1").innerHTML = time1;
-document.getElementById("btm-2").innerHTML = time1;
-document.getElementById("btm-3").innerHTML = time1;
-document.getElementById("btm-4").innerHTML = time1;
 // Message
 
 const messagelist = [
@@ -43,12 +31,8 @@ document.getElementById("con-4").innerHTML=messagelist[3].con;
 // Timer
 var timer = document.getElementById('timer');
 var toggleBtn = document.getElementById('start');
-var lap = document.getElementById('lap');
 var watch = new Stopwatch(timer);
 
-lap.addEventListener('click', function(){
-  watch.lap();
-});
 function start() {
     toggleBtn.textContent = 'Stop';
     watch.start();
@@ -110,91 +94,47 @@ function Stopwatch(elem) {
       interval = null;
       this.isOn = false;
     };
-    this.lap = function(){
-      var laplbltxt = document.createTextNode("LAP"+" - " + hours+":" + minutes + ":" + seconds);
-      var lp = document.createElement("display");
-      lp.appendChild(laplbltxt);
-    };
-    this.isOn = false;
   }
 
 // show and hide
 $(document).ready(function(){
     $(".main").show();
-    $(".mainMsg").hide();
-    $(".mainMusic").hide();
-    $(".mainTimer").hide();
-    $(".maincon-1").hide();
-    $(".maincon-2").hide();
-    $(".maincon-3").hide();
-    $(".maincon-4").hide();
+    $(".mainMusic,.mainMsg,.mainTimer,.maincon-1,.maincon-2,.maincon-3,.maincon-4").hide();
 
     $("#message").click(function(){
-        $(".main").hide();
-        $(".mainMsg").show();
-        $(".mainMusic").hide();
-        $(".mainTimer").hide(); 
-        $(".maincon-1").hide(); 
-        $(".maincon-2").hide();
-        $(".maincon-3").hide();
-        $(".maincon-4").hide();
+      $(".main,.mainMusic,.mainTimer,.maincon-1,.maincon-2,.maincon-3,.maincon-4").hide();
+      $(".mainMsg").show();    
     });
     $("#msg-1").click(function(){
-        $(".main").hide();
-        $(".mainMsg").hide();
-        $(".mainMusic").hide();
-        $(".mainTimer").hide(); 
+      $(".main,.mainMsg,.mainMusic,.mainTimer,.maincon-2,.maincon-3,.maincon-4").hide();
         $ (".maincon-1").show();
-        $(".maincon-2").hide();
-        $(".maincon-3").hide();
-        $(".maincon-4").hide();
     });
     $("#msg-2").click(function(){
-        $(".main").hide();
-        $(".mainMsg").hide();
-        $(".mainMusic").hide();
-        $(".mainTimer").hide(); 
-        $(".maincon-1").hide();
+      $(".main,.mainMsg,.mainMusic,.mainTimer,.maincon-1,.maincon-3,.maincon-4").hide();
         $ (".maincon-2").show();
-        $(".maincon-3").hide();
-        $(".maincon-4").hide();
+        
     });
     $("#msg-3").click(function(){
-        $(".main").hide();
-        $(".mainMsg").hide();
-        $(".mainMusic").hide();
-        $(".mainTimer").hide(); 
-        $ (".maincon-1").hide();
-        $(".maincon-2").hide(); 
+      $(".main,.mainMsg,.mainMusic,.mainTimer,.maincon-1,.maincon-2,.maincon-4").hide(); 
         $(".maincon-3").show(); 
-        $(".maincon-4").hide(); 
     });
     $("#msg-4").click(function(){
-        $(".main").hide();
-        $(".mainMsg").hide();
-        $(".mainMusic").hide();
-        $(".mainTimer").hide(); 
-        $(".maincon-1").hide(); 
-        $(".maincon-2").hide(); 
-        $(".maincon-3").hide(); 
+        $(".main,.mainMsg,.mainMusic,.mainTimer,.maincon-1,.maincon-2,.maincon-3").hide(); 
         $ (".maincon-4").show();
-
+    });
+    $(".fa").click(function(){
+      $(".mainMsg").show();
+      $(".maincon-4,.maincon-3,.maincon-2,.maincon-1").hide();
     });
 
     $("#music").click(function(){
-        $(".main").hide();
-        $(".mainMsg").hide();
-        $(".mainMusic").show();
-        $(".mainTimer").hide(); 
-        $(".maincon").hide();
+      $(".main,.mainMsg,.mainTimer,.maincon-1,.maincon-2,.maincon-3,.maincon-4").hide();
+      $(".mainMusic").show();
     });
 
     $("#stopwatch").click(function(){
-        $(".main").hide();
-        $(".mainMsg").hide();
-        $(".mainMusic").hide();
-        $(".mainTimer").show(); 
-        $(".maincon").hide();
+      $(".main,.mainMsg,.mainMusic,.maincon-1,.maincon-2,.maincon-3,.maincon-4").hide();
+      $(".mainTimer").show();
     });
 });
 
