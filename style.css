@@ -42,7 +42,7 @@ span{
   margin-left:3vw;
   margin-right: 3vw;
   height: 8.33vh;
-  width: 100%;
+  width: 33.33vw;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   padding: 0;
@@ -53,21 +53,21 @@ span{
   align-items: center;
   display: flex;
   height: 33.33vh;
-  width: 33.33vw;
-  border-radius: 20px;
+  width: 35.33vw;
+  border-radius: 10px;
 }
 .rect{
-  height: 30vh;
+  height: 29vh;
   width: 14.33vw;
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: var(--color-3);
 }
 .main{
   color:var(--color-1);
   text-align: center;
-  justify-content: center;
+  margin-top: 4vh;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 3em;
+  font-size: 3vw;
 }
 .bmid{
   background-color: var(--color-4);
@@ -88,17 +88,18 @@ span{
   margin-bottom: 25vh;
   padding: 0;
   height:8.33vh;
+  width:33.33vw;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   justify-content: center;
   align-items: center;
-  display: flex;
 }
 .mainMusic,.mainMsg{
   color:var(--color-1);
   font-size: 2vw;
   justify-content: center;
   text-align: center;
+  overflow-y:auto;
 }
 /* For timer font */
 .mainTimer{
@@ -127,33 +128,31 @@ span{
   display: flex;
   justify-content: center;
 }
-.home{
-  margin:0;
-  padding: 0;
-}
 h3{
   color:var(--color-1);
   display: inline;
   text-align: left; 
 }
 .chat{
-  overflow-y:scroll;
   font-size: 1.5vw;
 }
 #msg-1,#msg-2,#msg-3,#msg-4{
   background-color: var(--color-7);
   color: var(--color-3);
   cursor: pointer;
-  margin-top: 15px;
+  margin-top: 13px;
   text-align: left;
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
 }
 .content-1,.content-2,.content-3,.content-4{
   background-color: var(--color-7);
   color: var(--color-3);
   font-size: 1.5vw;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 20px;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  margin-top: 2vh;
+  margin-bottom: 1vh;
 }
 
 
