@@ -32,32 +32,15 @@ document.getElementById("con-4").innerHTML=messagelist[3].con;
 var timer = document.getElementById('timer');
 var toggleBtn = document.getElementById('start');
 var watch = new Stopwatch(timer);
-
+// reset button 
  var sec=0, min=0, hour=0;
-//  function start(sec){
-//    while(sec!=59){
-//    sec++;
-//    if(sec==59){
-//      sec = 0;
-//      min++;
-//      if(min == 59){
-//        min = 0;
-//        hour++;
-//        if(hour ==59){
-//          hour++;
-//        }
-//      }
-//    }
-//    document.getElementById('timer').innerHTML = hour + ":" + min + ":" + sec;
-//  }}
-//  setTimeout("start();",10);
-
  function reset(){
   sec=0;
   min=0;
   hour=0;
  document.getElementById('timer').innerHTML = hour + ":" + min + ":" + sec;
 }
+// start and stop timer
 function start() {
     toggleBtn.textContent = 'Stop';
     watch.start();
