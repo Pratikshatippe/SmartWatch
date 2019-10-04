@@ -33,6 +33,31 @@ var timer = document.getElementById('timer');
 var toggleBtn = document.getElementById('start');
 var watch = new Stopwatch(timer);
 
+ var sec=0, min=0, hour=0;
+//  function start(sec){
+//    while(sec!=59){
+//    sec++;
+//    if(sec==59){
+//      sec = 0;
+//      min++;
+//      if(min == 59){
+//        min = 0;
+//        hour++;
+//        if(hour ==59){
+//          hour++;
+//        }
+//      }
+//    }
+//    document.getElementById('timer').innerHTML = hour + ":" + min + ":" + sec;
+//  }}
+//  setTimeout("start();",10);
+
+ function reset(){
+  sec=0;
+  min=0;
+  hour=0;
+ document.getElementById('timer').innerHTML = hour + ":" + min + ":" + sec;
+}
 function start() {
     toggleBtn.textContent = 'Stop';
     watch.start();
@@ -81,7 +106,7 @@ function Stopwatch(elem) {
       }
       hours= hours-5;
       minutes = minutes-30;
-      return hours + '0:0' + minutes + ':' + seconds;
+      return hours + ':' + minutes + ':' + seconds;
     }
    
     this.start = function() {

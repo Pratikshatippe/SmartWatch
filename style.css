@@ -139,7 +139,7 @@ h4{
   font-size: 1.5vw;
 }
 #msg-1,#msg-2,#msg-3,#msg-4{
-  background-color: var(--color-5);
+  background-color: var(--color-1);
   color: var(--color-3);
   cursor: pointer;
   margin-top: 13px;
@@ -147,6 +147,7 @@ h4{
   margin-left: 0.5vw;
   margin-right: 0.5vw;
   border-radius: 5px;
+  /* border-color:var(--color-1); */
 }
 .maincon-1,.maincon-2,.maincon-3,.maincon-4{
   color: var(--color-1);
