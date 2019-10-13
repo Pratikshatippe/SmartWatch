@@ -98,7 +98,6 @@ span{
   font-size: 2vw;
   justify-content: center;
   text-align: center;
-  overflow-y:auto;
 }
 /* For timer font */
 .mainTimer{
