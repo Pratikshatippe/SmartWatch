@@ -2,9 +2,9 @@
 var today = new Date();
 var day = today.getDay();
 var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
-document.getElementById("day").innerHTML = daylist[day];
+$("#day").text(daylist[day]);
 var time1 = (today.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }));
-document.getElementById("time").innerHTML = time1;
+$("#time").text(time1);
 // Message
 
 const messagelist = [
@@ -13,20 +13,6 @@ const messagelist = [
     {name:"VM-SWIGGY", con:"keep calm and party on this friday, with up to 50% off at big Hunger Fest!"},
     {name:"VZ-SBIUPI", con:"Dear SBI UPI User, your A/cX4890 - debited by Rs 40.0 on 05Sep10 Ref No 4256178"}
 ];
-
-// This for display message list in message 
-document.getElementById("msg-1").innerHTML=messagelist[0].name;
-document.getElementById("con-1").innerHTML=messagelist[0].con;
-
-document.getElementById("msg-2").innerHTML=messagelist[1].name;
-document.getElementById("con-2").innerHTML=messagelist[1].con;
-
-document.getElementById("msg-3").innerHTML=messagelist[2].name;
-document.getElementById("con-3").innerHTML=messagelist[2].con;
-
-document.getElementById("msg-4").innerHTML=messagelist[3].name;
-document.getElementById("con-4").innerHTML=messagelist[3].con;
-
 
 // Timer
 var timer = document.getElementById('timer');
@@ -110,23 +96,31 @@ $(document).ready(function(){
     $(".mainMusic,.mainMsg,.mainTimer,.maincon-1,.maincon-2,.maincon-3,.maincon-4").hide();
 
     $("#message").click(function(){
+      $("#msg-1").text(messagelist[0].name);
+      $("#msg-2").text(messagelist[1].name);
+      $("#msg-3").text(messagelist[2].name);
+      $("#msg-4").text(messagelist[3].name);
       $(".main,.mainMusic,.mainTimer,.maincon-1,.maincon-2,.maincon-3,.maincon-4").hide();
       $(".mainMsg").show();    
     });
     $("#msg-1").click(function(){
+      $("#con-1").text(messagelist[0].con);
       $(".main,.mainMsg,.mainMusic,.mainTimer,.maincon-2,.maincon-3,.maincon-4").hide();
         $ (".maincon-1").show();
     });
     $("#msg-2").click(function(){
+      $("#con-2").text(messagelist[1].con);
       $(".main,.mainMsg,.mainMusic,.mainTimer,.maincon-1,.maincon-3,.maincon-4").hide();
         $ (".maincon-2").show();
         
     });
     $("#msg-3").click(function(){
+      $("#con-3").text(messagelist[2].con);
       $(".main,.mainMsg,.mainMusic,.mainTimer,.maincon-1,.maincon-2,.maincon-4").hide(); 
         $(".maincon-3").show(); 
     });
     $("#msg-4").click(function(){
+      $("#con-4").text(messagelist[3].con);
         $(".main,.mainMsg,.mainMusic,.mainTimer,.maincon-1,.maincon-2,.maincon-3").hide(); 
         $ (".maincon-4").show();
     });
