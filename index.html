@@ -41,9 +41,9 @@
                                         <div class="set"> <h4>Message</h4></div>
                                         <h5 class="chat">
                                             <div id="msg-1"></div>
-                                            <div id="msg-2">1</div>
-                                            <div id="msg-3">1</div>         
-                                            <div id="msg-4">1</div>         
+                                            <div id="msg-2"></div>
+                                            <div id="msg-3"></div>         
+                                            <div id="msg-4"></div>         
                                         </h5>
                                     </div>
                                     <!-- Display full message from the list -->
@@ -67,7 +67,7 @@
                                     <!-- This is for music -->
                                     <div class="mainMusic">
                                         <h4>Music</h4>  
-                                        <iframe id="player" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWXJfnUiYjUKT"
+                                        <iframe id="iframe-id" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWXJfnUiYjUKT"
                                         width="150" height="145" frameborder="0" allowtransparency="true"
                                         allow="encrypted-media"></iframe>
                                     </div>
@@ -75,8 +75,9 @@
                                     <div class="mainTimer">
                                     <h4>Timer</h4>  
                                         <p id="timer">00:00:00</p>
-                                        <button id="start">Start</button>
-                                        <button id="reset" onclick="reset()">reset</button>
+                                        <i class="fa fa-play" id="start"></i>
+                                        <i class="fa fa-pause" id="stop"></i>
+                                        <i class="fa fa-refresh" id="reset"></i>
                                     </div>
                             </div>
                         </div>
