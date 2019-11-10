@@ -8,6 +8,11 @@ $(document).ready(function(){
     $("#day").text(daylist[day]);
     var time1 = (today.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }));
     $("#time").text(time1);
+    message();
+    playMusic();
+    timerStopwatch();
+});
+function message(){
     // Message
 
     const messagelist = [
@@ -50,41 +55,44 @@ $(document).ready(function(){
       $(".mainMsg").show();
       $(".maincon-4,.maincon-3,.maincon-2,.maincon-1").hide();
     });
+}
 
+function playMusic(){
     $("#music").click(function(){
       $(".main,.mainMsg,.mainTimer,.maincon-1,.maincon-2,.maincon-3,.maincon-4").hide();
       $(".mainMusic").show();
     });
+}
 
+function timerStopwatch(){
     // reset button 
+    $('#reset').click(function(){
       var sec=0, min=0, hour=0;
-      function reset(){
-        sec=0;
-        min=0;
-        hour=0;
       document.getElementById('timer').innerHTML = hour + ":" + min + ":" + sec;
-      }
+    });
 
     $("#stopwatch").click(function(){
-      $(".main,.mainMsg,.mainMusic,.maincon-1,.maincon-2,.maincon-3,.maincon-4").hide();
+      $(".main,.mainMsg,.mainMusic,.maincon-1,.maincon-2,.maincon-3,.maincon-4,.set,.chat").hide();
       $(".mainTimer").show();
       // Timer
         var timer = document.getElementById('timer');
-        var toggleBtn = document.getElementById('start');
+        var startbtn = document.getElementById('start');
+        var stopbtn = document.getElementById('stop');
         var watch = new Stopwatch(timer);
-        reset();
+     
         // start and stop timer
         function start() {
-            toggleBtn.textContent = 'Stop';
             watch.start();
           }
           function stop() {
-            toggleBtn.textContent = 'Start';
             watch.stop();
           }
-          toggleBtn.addEventListener('click', function() {
-            watch.isOn ? stop() : start();
+          startbtn.addEventListener('click', function() {
+           start();
           });
+          stopbtn.addEventListener('click', function() {
+            stop();
+           });
           
         function Stopwatch(elem) {
             var time = 0;
@@ -137,6 +145,6 @@ $(document).ready(function(){
             };
           }
     });
-});
+  }
 
 
