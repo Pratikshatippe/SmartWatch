@@ -13,7 +13,7 @@ $(document).ready(function(){
     timerStopwatch();
 });
 function message(){
-    // Message
+    // Message array 
 
     const messagelist = [
       {name:"VZ-VFCARE", con:"hello! Now Upgrade to a 4G SIM and get 4GB data free for 10 days."},
@@ -66,85 +66,93 @@ function playMusic(){
 
 function timerStopwatch(){
     // reset button 
-    $('#reset').click(function(){
-      var sec=0, min=0, hour=0;
-      document.getElementById('timer').innerHTML = hour + ":" + min + ":" + sec;
-    });
+    
 
-    $("#stopwatch").click(function(){
-      $(".main,.mainMsg,.mainMusic,.maincon-1,.maincon-2,.maincon-3,.maincon-4,.set,.chat").hide();
-      $(".mainTimer").show();
-      // Timer
-        var timer = document.getElementById('timer');
-        var startbtn = document.getElementById('start');
-        var stopbtn = document.getElementById('stop');
-        var watch = new Stopwatch(timer);
-     
-        // start and stop timer
-        function start() {
-            watch.start();
-          }
-          function stop() {
-            watch.stop();
-          }
-          startbtn.addEventListener('click', function() {
-           start();
-          });
-          stopbtn.addEventListener('click', function() {
-            stop();
-           });
-          
-        function Stopwatch(elem) {
-            var time = 0;
-            var offset;
-            var interval;
-          
-            function update() {
-              if (this.isOn) {
-                time += delta();
-              }
-              elem.textContent = timeFormatter(time);
-            }
-            function delta() {
-              var now = performance.now();
-              var timePassed = now - offset;
-          
-              offset = now;
-              return timePassed;
-            }
-            function timeFormatter(time) {
-              time = new Date(time);
-          
-              var hours = time.getHours().toString();
-              var minutes= time.getMinutes().toString();
-              var seconds = time.getSeconds().toString();
-          
-              if (hours.length < 2) {
-                hours = '0' + hours; 
-              }
-              if (minutes.length < 2) {
-                minutes = '0' + minutes;
-              }
-              while (seconds.length < 2) {
-                seconds = '0' + seconds;
-              }
-              hours= hours-5;
-              minutes = minutes-30;
-              return hours + ':' + minutes + ':' + seconds;
-            }
-          
-            this.start = function() {
-              interval = setInterval(update.bind(this), 10);
-              offset = performance.now();
-              this.isOn = true;
-            };
-            this.stop = function() {
-              clearInterval(interval);
-              interval = null;
-              this.isOn = false;
-            };
-          }
+$("#stopwatch").click(function(){
+    $(".main,.mainMsg,.mainMusic,.maincon-1,.maincon-2,.maincon-3,.maincon-4,.set,.chat").hide();
+    $(".mainTimer").show();
+    // Timer
+    var timer = document.getElementById('timer');
+    var startbtn = $('#start');
+    var stopbtn = $('#stop');
+    var resetbtn = $('#reset');
+    var watch = new Stopwatch(timer);
+  
+    // start and stop timer
+    function start() {
+      watch.start();
+    }
+    function stop() {
+      watch.stop();
+    }
+    startbtn.click(function() {
+      start();
     });
-  }
+    // calling stop function
+    stopbtn.click(function() {
+      stop();
+    });
+    // calling reset function
+    resetbtn.click(function(){
+      reset();
+    });
+      
+    function Stopwatch(elem) {
+      var time = 0;
+      var offset;
+      var interval;
+      
+      function update() {
+        if (this.isOn) {
+            time += delta();
+        }
+        elem.textContent = timeFormatter(time);
+      }
+      function delta() {
+        var now = performance.now();
+        var timePassed = now - offset;
+      
+        offset = now;
+        return timePassed;
+      }
+      function timeFormatter(time) {
+        time = new Date(time);
+      
+        var hours = time.getHours().toString();
+        var minutes= time.getMinutes().toString();
+        var seconds = time.getSeconds().toString();
+    
+        if (hours.length < 2) {
+          hours = '0' + hours; 
+        }
+        if (minutes.length < 2) {
+          minutes = '0' + minutes;
+        }
+        while (seconds.length < 2) {
+          seconds = '0' + seconds;
+        }
+        hours= hours-5;
+        minutes = minutes-30;
+        return hours + ':' + minutes + ':' + seconds;
+      }
+      
+      this.start = function() {
+        interval = setInterval(update.bind(this), 10);
+        offset = performance.now();
+        this.isOn = true;
+      };
+      this.stop = function() {
+        clearInterval(interval);
+        interval = null;
+        this.isOn = false;
+      };
+      this.reset = (function(){
+        console.log("here");
+        var sec=0, min=0, hour=0;
+        $('#timer').html(hour + ":" + min + ":" + sec);
+      });
+    }
+  });
+}
 
 
