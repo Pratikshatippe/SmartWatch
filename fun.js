@@ -85,6 +85,9 @@ $("#stopwatch").click(function(){
     function stop() {
       watch.stop();
     }
+    function reset(){
+      watch.reset();
+    }
     startbtn.click(function() {
       start();
     });
